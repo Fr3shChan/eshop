@@ -3,7 +3,7 @@ import Hero from '../../components/Hero'
 import Products from '../../components/Products'
 import Feature from '../../components/Features'
 import Stats from '../../components/Stats'
-import Footer from '../../Footer'
+
 
 const Home = () => {
     const [products, setProducts] = useState([])
@@ -33,8 +33,7 @@ const Home = () => {
             }
             <Products />
             <Feature />
-            <Stats/>
-            
+            <Stats/>            
         </>
     )
 }
