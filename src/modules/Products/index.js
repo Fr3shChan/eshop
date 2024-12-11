@@ -1,26 +1,33 @@
 import React, { useEffect, useState } from 'react'
 import ProductsCard from '../../components/ProductsCard'
-import Feature from '../../components/Features'
+import Categories from '../../components/Categories'
 
 const Products = () => {
-    const [categories, setCategories] = useState([])
+    const [products, setProducts] = useState([])
     useEffect(() => {
-        const fetchCategories = async () => {
-            const response = await fetch('https://fakestoreapi.com/products/categories')
+        const fetchProducts = async () => {
+            const response = await fetch('https://fakestoreapi.com/products')
             const data = await response.json()
             console.log(data)
-            setCategories(data)
+            setProducts(data)
         }
-        fetchCategories()
+        fetchProducts()
     }, [])
-
-    if (categories.length === 0) return <div>Ładowanie...</div>
-
 
     return (
         <div>
-            <Feature cards={categories} />
-            <ProductsCard />
+            <Categories />
+            <div className="flex flex-col text-center w-full mt-20">
+                <h2 className="text-xs text-green-500 tracking-widest font-medium title-font mb-1">PRODUKTY</h2>
+                <h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-900">WSZYSTKIE PRODUKTY</h1>
+            </div>
+            {
+                products.length > 0 ?
+
+                    <ProductsCard products={products}/>
+                    :
+                    <div>Ładowanie...</div>
+            }
         </div>
     )
 }

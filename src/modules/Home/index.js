@@ -4,6 +4,7 @@ import Products from '../../components/ProductsCard'
 import Feature from '../../components/Features'
 import Stats from '../../components/Stats'
 import ProductsCard from '../../components/ProductsCard'
+import Categories from '../../components/Categories'
 
 
 const Home = () => {
@@ -22,7 +23,7 @@ const Home = () => {
     return (
         <>
             <Hero />
-            <Feature />
+            <Categories />
             <div className="flex flex-col text-center w-full mt-20">
                 <h2 className="text-xs text-green-500 tracking-widest font-medium title-font mb-1">PRODUKTY</h2>
                 <h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-900">NAJPOPULARNIEJSZE PRODUKTY</h1>
