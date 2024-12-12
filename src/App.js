@@ -19,9 +19,7 @@ function App() {
         <Route path="/products" element={<Products/>} />
         <Route path="/categories/:name" element={<CategoryProducts/>} />
         <Route path="*" element={<div>404</div>} />
-
       </Routes>
-      
       <Footer/>
     </div>
   );

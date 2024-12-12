@@ -2,10 +2,8 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import ProductsCard from '../../components/ProductsCard'
 
-
-
 const CategoryProducts = () => {
-    const { name } = useParams
+    const { name } = useParams()
     const [products, setProducts] = useState([])
     useEffect(() => {
         const fetchProducts = async () => {

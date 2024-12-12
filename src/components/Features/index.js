@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const Feature = ({ cards = [1, 2, 3] }) => {
+const Feature = ({cards = [1, 2, 3]}) => {
     return (
 
         <section className="text-gray-600 body-font">
@@ -38,9 +38,6 @@ const Feature = ({ cards = [1, 2, 3] }) => {
                             )
                         })
                     }
-
-
-
                 </div>
             </div>
         </section>
