@@ -8,6 +8,8 @@ import Product from './modules/Product';
 import Products from './modules/Products';
 import CategoryProducts from './modules/CategoryProducts';
 import Cart from './modules/Cart';
+import Login from './modules/Login';
+import Signup from './modules/SignUp';
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
         <Route path="/products" element={<Products/>} />
         <Route path="/categories/:name" element={<CategoryProducts/>} />
         <Route path="cart" element={<Cart/>} />
+        <Route path="/login" element={<Login/>} />
+        <Route path="/signup" element={<Signup/>} />
         <Route path="*" element={<div>404</div>} />
       </Routes>
       <Footer/>
